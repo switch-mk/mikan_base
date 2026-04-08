@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〇〇みかん農園 | 太陽と大地の恵み</title>
+    <style>
+        :root {
+            --primary: #ff8c00;
+            --secondary: #4caf50;
+            --text-main: #4a3b32;
+            --bg-body: #fdfaf5;
+        }
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-body);
+            font-family: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN W4", "Helvetica Neue", Arial, Meiryo, sans-serif;
+            color: var(--text-main);
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .hero {
+            height: 70vh;
+            background-image: url('./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_16.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background: rgba(0,0,0,0.3);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #ffffff;
+        }
+        .hero-text h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 4px;
+            line-height: 1.4;
+        }
+        .hero-text p {
+            font-size: clamp(14px, 3vw, 20px);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        .section {
+            padding: 80px 40px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            color: var(--secondary);
+            font-size: 32px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        footer {
+            background-color: var(--text-main);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px;
+        }
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 10px; }
+            .section { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">〇〇みかん農園</a>
+        <nav class="nav-links">
+            <a href="#">私たちのこだわり</a>
+            <a href="#products">商品一覧</a>
+            <a href="#">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>太陽のごちそう、<br>もぎたてをそのまま。</h1>
+            <p>農家直送だからできる、最高の甘みと瑞々しさ。</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>私たちのこだわり</h2>
+        <p style="line-height: 2; margin-bottom: 40px;">
+            〇〇みかん農園は、温暖な気候と太陽の光をたっぷり浴びた斜面で、<br>
+            一つひとつのみかんを我が子のように大切に育てています。<br>
+            木で完熟させ、甘さと酸味のバランスが最も良くなる瞬間を見極めて収穫しています。
+        </p>
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <img src="./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_11.jpg" alt="農園の様子" style="width:100%; height:300px; object-fit:cover; border-radius: 12px;">
+            <img src="./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_22.jpg" alt="みかん" style="width:100%; height:300px; object-fit:cover; border-radius: 12px;">
+        </div>
+    </section>
+
+    <section id="products" class="section" style="background-color: #fff; max-width: 100%; padding: 80px 20px;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2>採れたて商品一覧</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_1.jpg" alt="温州みかん">
+                    <div class="card-content">
+                        <div class="card-title">極早生みかん 3kg箱</div>
+                        <div class="card-price">¥2,500(税込)</div>
+                        <p style="font-size: 14px; color: #666; margin-top: 10px;">甘酸っぱくてジューシーな初秋の味覚。採れたてを箱詰めしました。</p>
+                        <button style="margin-top: 15px; width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">カートに入れる</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_30.jpg" alt="デコポン">
+                    <div class="card-content">
+                        <div class="card-title">〇〇限定・完熟みかん</div>
+                        <div class="card-price">¥3,200(税込)</div>
+                        <p style="font-size: 14px; color: #666; margin-top: 10px;">糖度が高い一番良い時期まで待った、濃厚な甘さをお楽しみください。</p>
+                        <button style="margin-top: 15px; width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">カートに入れる</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./asset/photo/LINE_ALBUM_HP作成用（写真）_260408_41.jpg" alt="みかんジュース">
+                    <div class="card-content">
+                        <div class="card-title">100%みかん搾りジュース</div>
+                        <div class="card-price">¥1,800(税込)</div>
+                        <p style="font-size: 14px; color: #666; margin-top: 10px;">添加物一切不使用。みかんをそのまま飲んでいるような贅沢な味わいです。</p>
+                        <button style="margin-top: 15px; width: 100%; padding: 10px; background: #ccc; color: white; border: none; border-radius: 4px; font-weight: bold;">SOLD OUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 〇〇みかん農園. All rights reserved.</p>
+    </footer>
+</body>
+</html>
