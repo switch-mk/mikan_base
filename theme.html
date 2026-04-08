@@ -1,4 +1,4 @@
-{block:NotLoadItemsPage}
+﻿{block:NotLoadItemsPage}
 <!DOCTYPE html>
 
 <head>
@@ -232,7 +232,7 @@
             background-color: #fff;
             box-sizing: border-box;
             font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN",
-                "ヒラギノ角ゴ Pro W3", "Meiryo", sans-serif;
+                "繝偵Λ繧ｮ繝手ｧ偵ざ Pro W3", "Meiryo", sans-serif;
             font-size: 13px;
             line-height: 1.6em;
             margin: 0 auto;
@@ -528,7 +528,7 @@
 
         body {
             background-color: #ADC7C1;
-            font-family: Lato, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+            font-family: Lato, "繝偵Λ繧ｮ繝手ｧ偵ざ ProN W3", "Hiragino Kaku Gothic ProN", "繝｡繧､繝ｪ繧ｪ", Meiryo, sans-serif;
         }
 
         body.shop .wrapper {
@@ -2094,77 +2094,454 @@
             }
         }
 
-        /* 伊豫果園 ファミリー&温かみスタイル (design.md 準拠) */
+        /* 莨願ｱｫ譫懷恍 繝輔ぃ繝溘Μ繝ｼ&貂ｩ縺九∩繧ｹ繧ｿ繧､繝ｫ (design.md 貅匁侠) */
         @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap');
+
         :root {
-            --primary: #E67E22; /* サンセットオレンジ */
-            --gold: #F4D03F;    /* ハニーイエロー */
-            --sub: #8D6E63;     /* ウォームブラウン */
-            --text-main: #3E2723; /* ダークブラウン */
-            --bg-body: #FFFDF7; /* アイボリーホワイト */
+            --primary: #E67E22;
+            /* 繧ｵ繝ｳ繧ｻ繝・ヨ繧ｪ繝ｬ繝ｳ繧ｸ */
+            --gold: #F4D03F;
+            /* 繝上ル繝ｼ繧､繧ｨ繝ｭ繝ｼ */
+            --sub: #8D6E63;
+            /* 繧ｦ繧ｩ繝ｼ繝繝悶Λ繧ｦ繝ｳ */
+            --text-main: #3E2723;
+            /* 繝繝ｼ繧ｯ繝悶Λ繧ｦ繝ｳ */
+            --bg-body: #FFFDF7;
+            /* 繧｢繧､繝懊Μ繝ｼ繝帙Ρ繧､繝・*/
         }
-        body { background-color: var(--bg-body) !important; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', Meiryo, sans-serif !important; color: var(--text-main) !important; }
-        h1, h2, h3, .lp-title, .lp-feature-text h3 { font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'BIZ UDGothic', serif !important; font-weight: 700; color: var(--text-main); }
-        #mainHeader { background-color: rgba(255, 255, 255, 0.95); padding: 25px 0; box-shadow: 0 1px 5px rgba(0,0,0,0.03); backdrop-filter: blur(10px); }
-        body.shop #shopHeader h1 a { color: var(--text-main); font-size: 38px; text-decoration: none; font-weight: normal; letter-spacing: 8px; }
-        body.shop #shopHeader nav { border: none; margin-bottom: 30px; }
-        body.shop #shopHeader nav ul li a { color: #555; letter-spacing: 2px; font-size: 13px; transition: all 0.4s ease; }
-        body.shop #shopHeader nav ul li a:hover { color: var(--primary); opacity: 0.7; }
-        
-        /* ヒーローカルーセル (LP化) */
-        .hero-wrapper { height: 90vh; position: relative; margin-bottom: 0px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-attachment: fixed; opacity: 0; z-index: 0; animation: crossfade 24s infinite linear; }
-        .bg-1 { background-image: url('https://switch-mk.github.io/mikan_base/images/photo-34.jpg'); animation-delay: 0s; }
-        .bg-2 { background-image: url('https://switch-mk.github.io/mikan_base/images/photo-52.jpg'); animation-delay: 8s; }
-        .bg-3 { background-image: url('https://switch-mk.github.io/mikan_base/images/photo-38.jpg'); animation-delay: 16s; }
-        @keyframes crossfade { 0% { opacity: 0; transform: scale(1); } 10% { opacity: 1; } 33% { opacity: 1; transform: scale(1.05); } 43% { opacity: 0; transform: scale(1.05); } 100% { opacity: 0; transform: scale(1); } }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); z-index: 1; }
-        .hero-text { position: relative; z-index: 2; text-align: center; color: #ffffff; padding: 0 20px; }
-        .hero-text h1 { font-size: clamp(32px, 5vw, 64px); margin-bottom: 25px; text-shadow: 0 4px 15px rgba(0,0,0,0.6); letter-spacing: 12px; font-weight: normal; line-height: 1.4; }
-        .hero-text p { font-size: clamp(14px, 2vw, 20px); letter-spacing: 8px; text-shadow: 0 2px 10px rgba(0,0,0,0.6); font-weight: 300; }
-        .hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2; color: #fff; font-size: 12px; letter-spacing: 4px; display: flex; flex-direction: column; align-items: center; animation: bounce 2s infinite; }
-        .hero-scroll::after { content: ''; width: 1px; height: 40px; background: #fff; margin-top: 10px; }
-        @keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 10px); } }
-        
-        /* ガチLP セクションスタイル */
-        .lp-section { padding: 100px 20px; text-align: center; max-width: 100%; clear: both; }
-        .lp-section.bg-gray { background-color: rgba(141, 110, 99, 0.05); } /* ウォームブラウンの極薄 */
-        .lp-inner { max-width: 800px; margin: 0 auto; line-height: 1.8; letter-spacing: 0.05em; }
-        .lp-title { color: var(--primary); font-size: 32px; margin-bottom: 20px; letter-spacing: 4px; }
-        .lp-subtitle { color: var(--sub); font-size: 16px; margin-bottom: 40px; letter-spacing: 4px; font-weight: bold; }
-        .lp-text { font-size: 16px; color: var(--text-main); text-align: left; line-height: 1.8; }
-        .lp-feature { display: flex; flex-wrap: wrap; align-items: center; text-align: left; margin: 80px 0; gap: 40px; }
-        .lp-feature.reverse { flex-direction: row-reverse; }
-        .lp-feature-img { flex: 1; min-width: 300px; height: 350px; background-color: #ddd; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; }
-        .lp-feature-text { flex: 1; min-width: 300px; }
-        .lp-feature-text h3 { font-size: 24px; color: var(--primary); margin-bottom: 20px; border-left: 4px solid var(--gold); padding-left: 15px; }
-        
-        /* 追加ストーリーLPスタイル */
-        .lp-message-box { background-color: #fff; padding: 60px 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); position: relative; margin-top: 40px; text-align: left; }
-        .lp-message-box::before { content: ''; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23E67E22" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'); background-size: cover; }
-        .lp-message-img { width: 100%; height: 450px; background-color: #ddd; background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 30px; }
-        
-        .lp-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
-        .lp-grid-item { flex: 1; min-width: 200px; text-align: center; }
-        .lp-grid-img { width: 100%; aspect-ratio: 1; background-color: #ddd; background-size: cover; background-position: center; border-radius: 50%; margin-bottom: 15px; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .lp-grid-text { font-size: 15px; color: var(--text-main); font-weight: bold; }
-        
-        .lp-scene-box { display: flex; gap: 40px; align-items: center; background: rgba(230, 126, 34, 0.05); padding: 50px; border-radius: 12px; text-align: left; margin: 40px 0; }
-        @media (max-width: 768px) { .lp-scene-box { flex-direction: column; padding: 30px 20px; } }
-        .lp-scene-img { flex: 1; width: 100%; min-width: 280px; height: 300px; background-color: #ddd; background-size: cover; background-position: center; border-radius: 8px; }
-        .lp-scene-content { flex: 1; min-width: 280px; }
-        .lp-scene-content h4 { color: var(--primary); font-size: 22px; margin-bottom: 15px; }
 
-        .lp-cta-btn { display: inline-block; padding: 20px 60px; background: var(--primary); color: #fff !important; font-size: 18px; letter-spacing: 2px; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(230,126,34,0.3); transition: all 0.3s ease; margin-top: 40px; font-weight: bold; }
-        .lp-cta-btn:hover { transform: translateY(-2px); opacity: 0.9 !important; color: #fff; box-shadow: 0 8px 20px rgba(230,126,34,0.4); }
+        body {
+            background-color: var(--bg-body) !important;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', Meiryo, sans-serif !important;
+            color: var(--text-main) !important;
+        }
 
-        body#shopTopPage .item { background: #ffffff !important; border-radius: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid #f0f0f0 !important; margin-bottom: 50px !important; transition: all 0.5s ease; }
-        body#shopTopPage .item .itemImg { padding: 0 !important; border: none !important; overflow: hidden; }
-        body#shopTopPage .item .itemImg img { transition: transform 0.8s ease; }
-        body#shopTopPage .item:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
-        body#shopTopPage .item:hover .itemImg img { transform: scale(1.05); }
-        body#shopTopPage .itemTitle h2 { font-size: 15px !important; margin: 25px 0 10px !important; color: var(--text-main) !important; letter-spacing: 2px; }
-        body#shopTopPage .itemDetail .itemPrice { color: var(--gold) !important; font-size: 14px !important; padding-bottom: 25px !important; letter-spacing: 1px; }
+        h1,
+        h2,
+        h3,
+        .lp-title,
+        .lp-feature-text h3 {
+            font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'BIZ UDGothic', serif !important;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        #mainHeader {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 25px 0;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(10px);
+        }
+
+        body.shop #shopHeader h1 a {
+            color: var(--text-main);
+            font-size: 38px;
+            text-decoration: none;
+            font-weight: normal;
+            letter-spacing: 8px;
+        }
+
+        body.shop #shopHeader nav {
+            border: none;
+            margin-bottom: 30px;
+        }
+
+        body.shop #shopHeader nav ul li a {
+            color: #555;
+            letter-spacing: 2px;
+            font-size: 13px;
+            transition: all 0.4s ease;
+        }
+
+        body.shop #shopHeader nav ul li a:hover {
+            color: var(--primary);
+            opacity: 0.7;
+        }
+
+        /* 繝偵・繝ｭ繝ｼ繧ｫ繝ｫ繝ｼ繧ｻ繝ｫ (LP蛹・ */
+        .hero-wrapper {
+            height: 90vh;
+            position: relative;
+            margin-bottom: 0px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0;
+            z-index: 0;
+            animation: crossfade 24s infinite linear;
+        }
+
+        .bg-1 {
+            background-image: url('https://switch-mk.github.io/mikan_base/images/photo-34.jpg');
+            animation-delay: 0s;
+        }
+
+        .bg-2 {
+            background-image: url('https://switch-mk.github.io/mikan_base/images/photo-52.jpg');
+            animation-delay: 8s;
+        }
+
+        .bg-3 {
+            background-image: url('https://switch-mk.github.io/mikan_base/images/photo-38.jpg');
+            animation-delay: 16s;
+        }
+
+        @keyframes crossfade {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            43% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(32px, 5vw, 64px);
+            margin-bottom: 25px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            letter-spacing: 12px;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        .hero-text p {
+            font-size: clamp(14px, 2vw, 20px);
+            letter-spacing: 8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            font-weight: 300;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-scroll::after {
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: #fff;
+            margin-top: 10px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, 10px);
+            }
+        }
+
+        /* 繧ｬ繝´P 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｹ繧ｿ繧､繝ｫ */
+        .lp-section {
+            padding: 100px 20px;
+            text-align: center;
+            max-width: 100%;
+            clear: both;
+        }
+
+        .lp-section.bg-gray {
+            background-color: rgba(141, 110, 99, 0.05);
+        }
+
+        /* 繧ｦ繧ｩ繝ｼ繝繝悶Λ繧ｦ繝ｳ縺ｮ讌ｵ阮・*/
+        .lp-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+        }
+
+        .lp-title {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+
+        .lp-subtitle {
+            color: var(--sub);
+            font-size: 16px;
+            margin-bottom: 40px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .lp-text {
+            font-size: 16px;
+            color: var(--text-main);
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .lp-feature {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: left;
+            margin: 80px 0;
+            gap: 40px;
+        }
+
+        .lp-feature.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .lp-feature-img {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .lp-feature-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .lp-feature-text h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--gold);
+            padding-left: 15px;
+        }
+
+        /* 霑ｽ蜉繧ｹ繝医・繝ｪ繝ｼLP繧ｹ繧ｿ繧､繝ｫ */
+        .lp-message-box {
+            background-color: #fff;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            position: relative;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .lp-message-box::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23E67E22" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-size: cover;
+        }
+
+        .lp-message-img {
+            width: 100%;
+            height: 450px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .lp-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .lp-grid-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .lp-grid-img {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .lp-grid-text {
+            font-size: 15px;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .lp-scene-box {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            background: rgba(230, 126, 34, 0.05);
+            padding: 50px;
+            border-radius: 12px;
+            text-align: left;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .lp-scene-box {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+        }
+
+        .lp-scene-img {
+            flex: 1;
+            width: 100%;
+            min-width: 280px;
+            height: 300px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        .lp-scene-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .lp-scene-content h4 {
+            color: var(--primary);
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .lp-cta-btn {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--primary);
+            color: #fff !important;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .lp-cta-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9 !important;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        body#shopTopPage .item {
+            background: #ffffff !important;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f0f0f0 !important;
+            margin-bottom: 50px !important;
+            transition: all 0.5s ease;
+        }
+
+        body#shopTopPage .item .itemImg {
+            padding: 0 !important;
+            border: none !important;
+            overflow: hidden;
+        }
+
+        body#shopTopPage .item .itemImg img {
+            transition: transform 0.8s ease;
+        }
+
+        body#shopTopPage .item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        body#shopTopPage .item:hover .itemImg img {
+            transform: scale(1.05);
+        }
+
+        body#shopTopPage .itemTitle h2 {
+            font-size: 15px !important;
+            margin: 25px 0 10px !important;
+            color: var(--text-main) !important;
+            letter-spacing: 2px;
+        }
+
+        body#shopTopPage .itemDetail .itemPrice {
+            color: var(--gold) !important;
+            font-size: 14px !important;
+            padding-bottom: 25px !important;
+            letter-spacing: 1px;
+        }
     </style>
 
     {block:IndexPage}
@@ -2255,9 +2632,12 @@
     <header id="mainHeader" class="wrapper">
         <div id="shopHeader">
             <h1 style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                <a href="{IndexPageURL}" id="logo" style="text-decoration: none; display: inline-block; padding: 10px 0;">
+                <a href="{IndexPageURL}" id="logo"
+                    style="text-decoration: none; display: inline-block; padding: 10px 0;">
                     <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg" style="width: 280px; height: auto;">
-                        <text x="50%" y="38" text-anchor="middle" font-family="'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', serif" font-size="36" font-weight="bold" fill="#E67E22" letter-spacing="8">伊 豫 果 園</text>
+                        <text x="50%" y="38" text-anchor="middle"
+                            font-family="'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', serif" font-size="36"
+                            font-weight="bold" fill="#E67E22" letter-spacing="8">莨・雎ｫ 譫・蝨・/text>
                     </svg>
                     <span style="display: none;">{LogoTag}</span>
                 </a>
@@ -2313,143 +2693,157 @@
         </div>
     </header>
     {block:IndexPage}
-    <div class="hero-wrapper">
+        <div class="hero-wrapper">
         <div class="hero-bg bg-1"></div>
         <div class="hero-bg bg-2"></div>
         <div class="hero-bg bg-3"></div>
         <div class="hero-overlay"></div>
         <div class="hero-text">
-            <h1 style="font-size: clamp(24px, 4vw, 42px); line-height: 1.5;">愛媛・宇和海を望む段々畑から、<br>完熟みかんを産地直送。</h1>
-            <p style="font-size: clamp(14px, 2vw, 18px); margin-top: 15px;">木で熟したものを見極めて、家族の手で収穫・箱詰めしています。<br>ご家庭用にも、冬の贈り物にも。</p>
+            <h1 style="font-size: clamp(24px, 4vw, 42px); line-height: 1.5; margin-bottom: 5px;">愛媛産 完熟みかん｜朝採れ直送</h1>
+            <p style="font-size: clamp(14px, 2vw, 18px); margin-top: 10px; margin-bottom: 25px;">甘みと果汁がしっかりした、家庭用・贈答用みかん</p>
+            <div style="background: rgba(230,126,34,0.9); padding: 15px 20px; border-radius: 8px; display: inline-block; margin-bottom: 25px;">
+                <p style="font-size: 16px; margin: 0; font-weight: bold; text-shadow: none;">今が一番甘みが乗る時期です<br>在庫がなくなり次第終了</p>
+            </div><br>
+            <a href="#shopTopPage" style="display: inline-block; padding: 15px 40px; background: #fff; color: var(--primary); font-size: 16px; font-weight: bold; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s;">今すぐ商品を見る</a>
         </div>
         <div class="hero-scroll">SCROLL</div>
     </div>
 
+    <!-- スクロール2画面目（判断フェーズ） -->
     <section class="lp-section">
-        <div class="lp-inner">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <svg viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 380px; height: auto; margin: 0 auto; display: block;">
-                    <text x="50%" y="60" text-anchor="middle" font-family="'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', serif" font-size="52" font-weight="bold" fill="#E67E22" letter-spacing="12">伊 豫 果 園</text>
-                </svg>
+        <div class="lp-inner text-center">
+            <div style="background-color: #fcfcfc; padding: 40px 20px; border-radius: 12px; border: 1px solid #eee; margin-bottom: 80px;">
+                <p class="lp-subtitle" style="margin-bottom: 20px;">RECOMMEND</p>
+                <h2 class="lp-title" style="font-size: 24px; margin-bottom: 30px;">こんな人におすすめ</h2>
+                <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2.4; text-align: left; display: inline-block;">
+                    <li style="margin-bottom: 10px;">✅ 甘いみかんが欲しい</li>
+                    <li style="margin-bottom: 10px;">✅ 贈り物で失敗したくない</li>
+                    <li style="margin-bottom: 10px;">✅ スーパーのみかんに満足していない</li>
+                </ul>
             </div>
-            <h2 class="lp-title" style="text-align: center;">はじめての方へ<br>伊豫果園のみかんが選ばれる理由</h2>
-            <p class="lp-subtitle">OUR STORY</p>
-            <p class="lp-text" style="text-align: center; line-height: 2.4; font-size: 16px;">
-                愛媛・宇和海を望む段々畑から、完熟したみかんを産地直送しています。<br>
-                木でしっかり熟したタイミングを見極め、一つずつ手で収穫し、そのまま箱詰めしてお届けします。<br><br>
-                日当たりの良い斜面、潮風、そして水はけの良い土壌。<br>
-                柑橘に適した環境で育ったみかんは、果汁が多く、甘みと酸味のバランスがしっかりしています。<br>
-                収穫のタイミングを調整することで、味がのった状態のものだけを出荷しています。
-            </p>
-        </div>
-    </section>
 
-    <section class="lp-section bg-gray">
-        <div class="lp-inner">
-            <h2 class="lp-title">不器用でもいい。真っ直ぐに育てたいから。</h2>
-            <p class="lp-subtitle">HOW WE GROW</p>
+            <h2 class="lp-title">はじめての方へ<br>伊豫果園のみかんが選ばれる理由</h2>
+            <p class="lp-subtitle">REASONS</p>
             
             <div class="lp-feature">
-                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-3.jpg');"></div>
+                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-13.jpg');"></div>
                 <div class="lp-feature-text">
-                    <h3>01. 畑の環境</h3>
-                    <p class="lp-text">
-                        宇和海からの潮風、十分な日照、水はけの良い斜面。柑橘が育ちやすい条件がそろった畑で栽培しています。派手な設備ではなく、畑を毎日見て、木の状態を見ながら育てるやり方を続けています。
-                    </p>
+                    <h3>01. 木で完熟してから収穫</h3>
+                    <p class="lp-text">効率よりも味を優先し、木でしっかり熟したタイミングを見て収穫します。今が一番甘みがのっている時期です。</p>
                 </div>
             </div>
 
             <div class="lp-feature reverse">
-                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-13.jpg');"></div>
+                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-3.jpg');"></div>
                 <div class="lp-feature-text">
-                    <h3>02. 樹上で熟すのを待って収穫</h3>
-                    <p class="lp-text">
-                        効率よりも味を優先し、木でしっかり熟したタイミングを見て収穫します。収穫時期は天候や実の状態で変わるため、その年の雨量や色づき具合を見ながら、最適な時期を見極めて出荷しています。
-                    </p>
+                    <h3>02. 収穫後すぐ発送</h3>
+                    <p class="lp-text">宇和海からの潮風と十分な日照で育ったみかんを、収穫後できるだけ早く産地から直送します。</p>
                 </div>
             </div>
 
             <div class="lp-feature">
                 <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-23.jpg');"></div>
                 <div class="lp-feature-text">
-                    <h3>03. 手で選び、手で箱詰め</h3>
-                    <p class="lp-text">
-                        実の状態を見ながら、家族で一つずつ収穫・選別・箱詰めしています。規格のばらつきが出ることはありますが、その分、少しの傷みも見逃さず現物を見て判断できるのが私たちの強みです。
-                    </p>
+                    <h3>03. 果汁が多く味が安定</h3>
+                    <p class="lp-text">実の状態を見ながら家族で一つずつ選別しているため、味のばらつきが少なく、しっかりとした果汁とコクが楽しめます。</p>
                 </div>
+            </div>
+
+            <div style="margin-top: 80px; padding: 50px 20px; background: rgba(230,126,34,0.05); border-radius: 12px;">
+                <h3 style="color: var(--primary); font-size: 22px; font-weight: bold; margin-bottom: 15px;">初めての方へ</h3>
+                <p style="font-size: 16px; margin-bottom: 30px;">まずは家庭用で味を確認する方が多いです</p>
+                <a href="#shopTopPage" class="lp-cta-btn" style="margin-top: 0;">商品を見る</a>
             </div>
         </div>
     </section>
 
+    <!-- スクロール3画面目（安心フェーズ） -->
+    <section class="lp-section bg-gray">
+        <div class="lp-inner text-center">
+            <h2 class="lp-title">スーパーとの違い</h2>
+            <p class="lp-subtitle">DIFFERENCE</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; text-align: left; margin-bottom: 80px;">
+                <div style="flex: 1; min-width: 250px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary); font-weight: bold; margin-bottom: 15px;"><span style="font-size:24px;">1.</span> 収穫から出荷までが短い</h4>
+                    <p style="font-size: 15px; color: #555;">途中の流通を挟まない産地直送だからこそ、鮮度の高い状態でお手元に届きます。</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary); font-weight: bold; margin-bottom: 15px;"><span style="font-size:24px;">2.</span> 完熟してから収穫</h4>
+                    <p style="font-size: 15px; color: #555;">青いうちに収穫するのではなく、木にならせたまま一番美味しい時期まで待ちます。</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary); font-weight: bold; margin-bottom: 15px;"><span style="font-size:24px;">3.</span> 味のばらつきが少ない</h4>
+                    <p style="font-size: 15px; color: #555;">機械選別ではなく人の目で確認しているため、味がのっていない果実をしっかり弾きます。</p>
+                </div>
+            </div>
+
+            <h2 class="lp-title" style="font-size: 24px;">安心して購入するために</h2>
+            <div style="background-color: #fff; padding: 40px; border-radius: 8px; border-top: 4px solid var(--primary); text-align: left;">
+                <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: var(--text-main); text-align: center;">万が一、傷みがあれば対応します</p>
+                <p style="font-size: 15px; color: #555; text-align: center; line-height: 1.8;">生鮮食品のため、配送中の揺れ等で傷んでしまう可能性がゼロではありません。<br>万が一状態が悪いものが含まれていた場合は、到着時の状態が分かる写真を添えて<strong>到着当日中</strong>にご連絡ください。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- スクロール4画面目（ストーリー） -->
     <section class="lp-section">
         <div class="lp-inner text-center">
-            <!-- Usage & FAQ Section -->
-            <div style="margin-top: 50px;">
-                <p class="lp-subtitle">FOR YOUR FAMILY AND GIFT</p>
-                <h2 class="lp-title">ご家庭用にも、冬の贈り物にも</h2>
-                <div class="lp-message-box" style="text-align: center;">
-                    <p class="lp-text" style="line-height: 2.2;">
-                        ご家庭用として毎日楽しむのはもちろん、冬の贈り物としても選ばれています。<br>
-                        用途に応じて、見た目やサイズを考慮した商品をご用意していますので、商品一覧からお選びください。<br><br>
-                        はじめての方には少量サイズ、お歳暮などのご贈答には見た目を揃えた規格がおすすめです。<br>
-                        発送時期や内容量、規格の詳細につきましては各商品ページに記載しています。<br><br>
-                        自然のもののため、どうしてもサイズや外観にばらつきが出る場合がありますが、状態をひとつひとつ確認しながら選別しています。<br>
-                        保存は風通しの良い冷暗所で行い、できるだけ早めにお召し上がりください。<br><br>
-                        <strong>今の時期に出せる、最も状態の良いみかんだけをお届けします。<br>まずは商品一覧からご確認ください。</strong>
-                    </p>
-                </div>
+            <h2 class="lp-title">四国・愛媛の段々畑で</h2>
+            <p class="lp-subtitle">OUR STORY</p>
+            <div class="lp-message-box">
+                <p class="lp-text" style="line-height: 2.4; text-align: center;">
+                    おじいちゃんの代から100年守り続けたこの畑で、<br>
+                    私たちは毎日泥だらけになりながら、みかんと会話をしています。<br><br>
+                    その年の雨量や色づき具合を見ながら、収穫の時期を判断しています。<br>
+                    手間はかかりますが、味で選んでもらえるみかんを目指しています。<br>
+                    伊豫果園のみかんには、私たち家族の情熱とこだわりが詰まっています。
+                </p>
             </div>
-
-            <!-- Calendar Section -->
-            <div style="margin-top: 100px;">
-                <p class="lp-subtitle">300 DAYS STORY</p>
-                <h2 class="lp-title">収穫までの１年</h2>
-                <p class="lp-text" style="text-align: center;">みかん作りは収穫期だけでは終わりません。<br>春の開花、夏の手入れ、秋の見回りを重ねて、冬の収穫を迎えます。</p>
-                <div class="lp-grid">
-                    <div class="lp-grid-item">
-                        <div class="lp-grid-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-15.jpg');"></div>
-                        <p class="lp-grid-text">春：土づくりと開花</p>
-                    </div>
-                    <div class="lp-grid-item">
-                        <div class="lp-grid-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-25.jpg');"></div>
-                        <p class="lp-grid-text">夏：摘果と手入れ</p>
-                    </div>
-                    <div class="lp-grid-item">
-                        <div class="lp-grid-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-35.jpg');"></div>
-                        <p class="lp-grid-text">秋：愛情込めた見回り</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scene Section -->
-            <div style="margin-top: 100px; margin-bottom: 80px;">
-                <p class="lp-subtitle">FOR YOUR SMILE</p>
-                <h2 class="lp-title">贈答用からご家庭用まで</h2>
-                <div class="lp-scene-box">
-                    <div class="lp-scene-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-18.jpg');"></div>
-                    <div class="lp-scene-content">
-                        <h4>贈答用として</h4>
-                        <p class="lp-text">
-                            年末年始のご挨拶や、冬の贈り物として選びやすいみかんです。贈答向けに使う場合は、外観・内容量・発送時期を各商品ページからご確認ください。
-                        </p>
-                    </div>
-                </div>
-                <div class="lp-scene-box" style="flex-direction: row-reverse;">
-                    <div class="lp-scene-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-28.jpg');"></div>
-                    <div class="lp-scene-content">
-                        <h4>家庭用として</h4>
-                        <p class="lp-text">
-                            毎日食べるご家庭用としてもおすすめです。栽培や出荷時の取り扱いについて気になる点は、商品説明をご確認いただくか、お問い合わせよりお気軽にご質問ください。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#shopTopPage" class="lp-cta-btn" style="margin-bottom: 50px;">販売中の商品一覧へ</a>
         </div>
     </section>
+
+    <!-- スクロール5画面目（用途分岐） -->
+    <section class="lp-section bg-gray">
         <div class="lp-inner text-center">
-            <div style="background-color: #fcebdc; padding: 40px; border-radius: 8px; text-align: left; margin: 60px 0;">
+            <h2 class="lp-title">用途で選ぶ</h2>
+            <p class="lp-subtitle">LINEUP</p>
+            
+            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <div style="flex: 1; min-width: 300px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="height: 220px; background-image: url('https://switch-mk.github.io/mikan_base/images/photo-28.jpg'); background-size: cover; background-position: center;"></div>
+                    <div style="padding: 30px; text-align: left; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="color: var(--primary); font-size: 22px; margin-bottom: 20px; font-weight: bold;">【家庭用】</h3>
+                        <p style="font-size: 18px; margin-bottom: 20px; font-weight: bold; color: var(--text-main);">→ 味重視・コスパ重視</p>
+                        <p style="font-size: 15px; color: #555; margin-bottom: 30px; line-height: 1.8; flex: 1;">見た目に色ムラや小キズはありますが、中身の味は贈答用と同じです。毎日食べるご家庭用におすすめです。</p>
+                        <a href="#shopTopPage" style="display: block; padding: 18px; background: var(--primary); color: #fff; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; transition: all 0.3s; box-shadow: 0 4px 10px rgba(230,126,34,0.3);">家庭用を見る</a>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="height: 220px; background-image: url('https://switch-mk.github.io/mikan_base/images/photo-18.jpg'); background-size: cover; background-position: center;"></div>
+                    <div style="padding: 30px; text-align: left; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="color: var(--gold); font-size: 22px; margin-bottom: 20px; font-weight: bold;">【贈答用】</h3>
+                        <p style="font-size: 18px; margin-bottom: 20px; font-weight: bold; color: var(--text-main);">→ 見た目・サイズを揃えた厳選品</p>
+                        <p style="font-size: 15px; color: #555; margin-bottom: 30px; line-height: 1.8; flex: 1;">お歳暮や冬の贈り物向けに、外観が美しくサイズが揃ったものを厳選して箱詰めします。</p>
+                        <a href="#shopTopPage" style="display: block; padding: 18px; background: var(--gold); color: #fff; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; transition: all 0.3s; box-shadow: 0 4px 10px rgba(244,208,63,0.3);">贈答用を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ラストクロージング -->
+    <section class="lp-section">
+        <div class="lp-inner text-center">
+            <h2 class="lp-title" style="font-size: 28px; line-height: 1.6;">今の時期に一番良い状態のものだけを出荷しています</h2>
+            
+            <div style="margin: 60px 0;">
+                <p style="font-size: 20px; color: #d32f2f; font-weight: bold; margin-bottom: 25px;">在庫がなくなり次第終了</p>
+                <a href="#shopTopPage" class="lp-cta-btn" style="padding: 25px 80px; font-size: 24px; width: 100%; max-width: 450px; box-sizing: border-box; display: inline-block;">今すぐ注文する</a>
+            </div>
+
+            <!-- FAQ追加ブロック -->
+            <div style="background-color: #fcebdc; padding: 40px; border-radius: 8px; text-align: left; margin: 80px 0 40px;">
                 <h3 style="color: var(--primary); font-size: 20px; font-weight: bold; margin-bottom: 20px; text-align: center;">よくあるご質問</h3>
                 <dl style="font-size: 14px; line-height: 1.8;">
                     <dt style="font-weight: bold; margin-top: 15px;">・発送時期について</dt>
@@ -2460,9 +2854,6 @@
                     
                     <dt style="font-weight: bold;">・保存方法</dt>
                     <dd style="margin-left: 0; margin-bottom: 15px;">到着後は風通しの良い冷暗所で保管し、なるべく早めにお召し上がりください。</dd>
-                    
-                    <dt style="font-weight: bold;">・傷みがあった場合</dt>
-                    <dd style="margin-left: 0;">到着時の状態が分かる写真を添えて、到着当日中にご連絡ください。</dd>
                 </dl>
             </div>
             
@@ -2472,9 +2863,8 @@
             </p>
         </div>
     </section>
-
     <section class="lp-section" style="padding-top: 150px; padding-bottom: 20px;">
-        <h2 class="lp-title">珠玉のラインナップ</h2>
+        <h2 class="lp-title">迴邇峨・繝ｩ繧､繝ｳ繝翫ャ繝・/h2>
         <p class="lp-subtitle">PRODUCTS</p>
     </section>
     {block:NotShopPublic}
@@ -2524,11 +2914,11 @@
                 </div>
                 <ul class="itemDetail">
                     {block:NoItemProperPrice}
-                    <!-- 定価 -->
+                    <!-- 螳壻ｾ｡ -->
                     <li class="itemPrice">{ItemPrice}</li>
                     {/block:NoItemProperPrice}
                     {block:HasItemProperPrice}
-                    <!-- 割引 -->
+                    <!-- 蜑ｲ蠑・-->
                     <li class="discountPrice">
                         <span class="discountPrice__ratio">{ItemDiscountRate}</span>
                         <span class="discountPrice__calcPrice">{ItemPrice}</span>
@@ -2856,7 +3246,8 @@
                 <div class="facebook">
                     <div class="fb-share-button" data-layout="button_count" data-size="small" data-mobile-iframe="true">
                         <a class="fb-xfbml-parse-ignore" target="_blank"
-                            href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">シェア</a></div>
+                            href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">繧ｷ繧ｧ繧｢</a>
+                    </div>
                 </div>
                 {EmbedWidgetTag}
             </div>
@@ -2961,7 +3352,7 @@
                 <li><a class="footerNav" href="{PrivacyPageURL}">{lang:Privacy}</a></li>
                 <li><a class="footerNav" href="{LawPageURL}">{lang:Law}</a></li>
                 {block:AppsMembership}
-                <li><a class="footerNav" href="https://thebase.com/pages/shop_membership_term">会員規約</a></li>
+                <li><a class="footerNav" href="https://thebase.com/pages/shop_membership_term">莨壼藤隕冗ｴ・/a></li>
                 {/block:AppsMembership}
                 <li class="boxRight">
                     <div>
@@ -2969,7 +3360,7 @@
                             <div class="fb-share-button" data-href="{ShopURL}/" data-layout="button_count"
                                 data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore"
                                     target="_blank"
-                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">シェア</a>
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">繧ｷ繧ｧ繧｢</a>
                             </div>
                         </div>
                         <div class="twitter sns">
