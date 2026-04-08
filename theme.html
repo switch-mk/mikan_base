@@ -2235,7 +2235,25 @@
     {/block:IndexPage}
     <header id="mainHeader" class="wrapper">
         <div id="shopHeader">
-            <h1><a href="{IndexPageURL}" id="logo">{LogoTag}</a></h1>
+            <h1 style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+                <a href="{IndexPageURL}" id="logo" style="text-decoration: none; display: inline-block;">
+                    <svg viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg" style="width: 220px; height: auto;">
+                      <g transform="translate(0, 5) scale(0.6)">
+                        <path d="M 30 15 Q 15 5 10 20 Q 20 25 30 15 Z" fill="#8f9c3e"/>
+                        <path d="M 32 17 Q 45 5 50 15 Q 40 25 32 17 Z" fill="#677524"/>
+                        <circle cx="30" cy="40" r="22" fill="url(#headerMikanGradient)"/>
+                        <defs>
+                          <radialGradient id="headerMikanGradient" cx="30%" cy="30%" r="80%">
+                            <stop offset="0%" stop-color="#ffb347"/>
+                            <stop offset="100%" stop-color="#e36b00"/>
+                          </radialGradient>
+                        </defs>
+                      </g>
+                      <text x="60" y="42" font-family="'Noto Serif JP', serif" font-size="26" font-weight="bold" fill="#333333" letter-spacing="6">伊豫果園</text>
+                    </svg>
+                    <span style="display: none;">{LogoTag}</span>
+                </a>
+            </h1>
             <nav>
                 <ul>
                     <li><a class="mainHeaderNavColor" href="{IndexPageURL}">HOME</a></li>
@@ -2301,7 +2319,23 @@
 
     <section class="lp-section">
         <div class="lp-inner">
-            <h2 class="lp-title">みかんは、私たち家族の「子供」です</h2>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 240px; height: auto; margin: 0 auto; display: block;">
+                  <g transform="translate(170, -5)">
+                    <path d="M 30 15 Q 15 5 10 20 Q 20 25 30 15 Z" fill="#8f9c3e"/>
+                    <path d="M 32 17 Q 45 5 50 15 Q 40 25 32 17 Z" fill="#677524"/>
+                    <circle cx="30" cy="40" r="22" fill="url(#mikanGradient)"/>
+                    <defs>
+                      <radialGradient id="mikanGradient" cx="30%" cy="30%" r="80%">
+                        <stop offset="0%" stop-color="#ffb347"/>
+                        <stop offset="100%" stop-color="#e36b00"/>
+                      </radialGradient>
+                    </defs>
+                  </g>
+                  <text x="50%" y="110" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="32" font-weight="bold" fill="#333333" letter-spacing="10">伊豫果園</text>
+                </svg>
+            </div>
+            <h2 class="lp-title" style="text-align: center;">みかんは、私たち家族の「子供」です</h2>
             <p class="lp-subtitle">OUR STORY</p>
             <p class="lp-text" style="text-align: center; line-height: 2.8; font-size: 17px;">
                 四国・愛媛の海を望む小さな段々畑。<br>
@@ -2325,7 +2359,7 @@
             <p class="lp-subtitle">HOW WE GROW</p>
             
             <div class="lp-feature">
-                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-41.jpg');"></div>
+                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-3.jpg');"></div>
                 <div class="lp-feature-text">
                     <h3>01. 奇跡をもたらす畑</h3>
                     <p class="lp-text">
@@ -2335,7 +2369,7 @@
             </div>
 
             <div class="lp-feature reverse">
-                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-42.jpg');"></div>
+                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-13.jpg');"></div>
                 <div class="lp-feature-text">
                     <h3>02. 究極を待つ「完全樹上完熟」</h3>
                     <p class="lp-text">
@@ -2345,7 +2379,7 @@
             </div>
 
             <div class="lp-feature">
-                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-45.jpg');"></div>
+                <div class="lp-feature-img" style="background-image: url('https://switch-mk.github.io/mikan_base/images/photo-23.jpg');"></div>
                 <div class="lp-feature-text">
                     <h3>03. すべて自分たちの「手」で</h3>
                     <p class="lp-text">
