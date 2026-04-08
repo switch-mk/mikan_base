@@ -2094,14 +2094,17 @@
             }
         }
 
-        /* 伊豫果園 プレミアムスタイル */
+        /* 伊豫果園 ファミリー&温かみスタイル (design.md 準拠) */
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap');
         :root {
-            --primary: #c85a17; /* 深みのあるマンダリンオレンジ */
-            --gold: #b39b5d;
-            --text-main: #2b2b2b;
-            --bg-body: #fdfcf9; /* 和紙のようなごく薄い生成り */
+            --primary: #E67E22; /* サンセットオレンジ */
+            --gold: #F4D03F;    /* ハニーイエロー */
+            --sub: #8D6E63;     /* ウォームブラウン */
+            --text-main: #3E2723; /* ダークブラウン */
+            --bg-body: #FFFDF7; /* アイボリーホワイト */
         }
-        body { background-color: var(--bg-body) !important; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif !important; color: var(--text-main) !important; }
+        body { background-color: var(--bg-body) !important; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', Meiryo, sans-serif !important; color: var(--text-main) !important; }
+        h1, h2, h3, .lp-title, .lp-feature-text h3 { font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'BIZ UDGothic', serif !important; font-weight: 700; color: var(--text-main); }
         #mainHeader { background-color: rgba(255, 255, 255, 0.95); padding: 25px 0; box-shadow: 0 1px 5px rgba(0,0,0,0.03); backdrop-filter: blur(10px); }
         body.shop #shopHeader h1 a { color: var(--text-main); font-size: 38px; text-decoration: none; font-weight: normal; letter-spacing: 8px; }
         body.shop #shopHeader nav { border: none; margin-bottom: 30px; }
@@ -2124,20 +2127,20 @@
         @keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 10px); } }
         
         /* ガチLP セクションスタイル */
-        .lp-section { padding: 120px 20px; text-align: center; max-width: 100%; clear: both; }
-        .lp-section.bg-gray { background-color: #f7f6f2; }
-        .lp-inner { max-width: 800px; margin: 0 auto; line-height: 2.5; }
-        .lp-title { color: var(--primary); font-size: 32px; margin-bottom: 20px; letter-spacing: 6px; font-weight: normal; }
-        .lp-subtitle { color: var(--gold); font-size: 16px; margin-bottom: 40px; letter-spacing: 4px; }
-        .lp-text { font-size: 16px; color: #333; letter-spacing: 2px; text-align: left; }
+        .lp-section { padding: 100px 20px; text-align: center; max-width: 100%; clear: both; }
+        .lp-section.bg-gray { background-color: rgba(141, 110, 99, 0.05); } /* ウォームブラウンの極薄 */
+        .lp-inner { max-width: 800px; margin: 0 auto; line-height: 1.8; letter-spacing: 0.05em; }
+        .lp-title { color: var(--primary); font-size: 32px; margin-bottom: 20px; letter-spacing: 4px; }
+        .lp-subtitle { color: var(--sub); font-size: 16px; margin-bottom: 40px; letter-spacing: 4px; font-weight: bold; }
+        .lp-text { font-size: 16px; color: var(--text-main); text-align: left; line-height: 1.8; }
         .lp-feature { display: flex; flex-wrap: wrap; align-items: center; text-align: left; margin: 80px 0; gap: 40px; }
         .lp-feature.reverse { flex-direction: row-reverse; }
-        .lp-feature-img { flex: 1; min-width: 300px; height: 350px; background-color: #ddd; background-size: cover; background-position: center; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+        .lp-feature-img { flex: 1; min-width: 300px; height: 350px; background-color: #ddd; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; }
         .lp-feature-text { flex: 1; min-width: 300px; }
-        .lp-feature-text h3 { font-size: 24px; color: var(--primary); margin-bottom: 20px; border-left: 3px solid var(--gold); padding-left: 15px; }
+        .lp-feature-text h3 { font-size: 24px; color: var(--primary); margin-bottom: 20px; border-left: 4px solid var(--gold); padding-left: 15px; }
         
-        .lp-cta-btn { display: inline-block; padding: 20px 60px; background: linear-gradient(135deg, #c85a17, #f39c12); color: #fff !important; font-size: 18px; letter-spacing: 4px; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 20px rgba(200,90,23,0.3); transition: all 0.3s ease; margin-top: 40px; }
-        .lp-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(200,90,23,0.4); opacity: 1 !important; color: #fff; }
+        .lp-cta-btn { display: inline-block; padding: 20px 60px; background: var(--primary); color: #fff !important; font-size: 18px; letter-spacing: 2px; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(230,126,34,0.3); transition: all 0.3s ease; margin-top: 40px; font-weight: bold; }
+        .lp-cta-btn:hover { transform: translateY(-2px); opacity: 0.9 !important; color: #fff; box-shadow: 0 8px 20px rgba(230,126,34,0.4); }
 
         body#shopTopPage .item { background: #ffffff !important; border-radius: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid #f0f0f0 !important; margin-bottom: 50px !important; transition: all 0.5s ease; }
         body#shopTopPage .item .itemImg { padding: 0 !important; border: none !important; overflow: hidden; }
@@ -2237,19 +2240,17 @@
         <div id="shopHeader">
             <h1 style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                 <a href="{IndexPageURL}" id="logo" style="text-decoration: none; display: inline-block;">
-                    <svg viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg" style="width: 220px; height: auto;">
-                      <g transform="translate(0, 5) scale(0.6)">
-                        <path d="M 30 15 Q 15 5 10 20 Q 20 25 30 15 Z" fill="#8f9c3e"/>
-                        <path d="M 32 17 Q 45 5 50 15 Q 40 25 32 17 Z" fill="#677524"/>
-                        <circle cx="30" cy="40" r="22" fill="url(#headerMikanGradient)"/>
-                        <defs>
-                          <radialGradient id="headerMikanGradient" cx="30%" cy="30%" r="80%">
-                            <stop offset="0%" stop-color="#ffb347"/>
-                            <stop offset="100%" stop-color="#e36b00"/>
-                          </radialGradient>
-                        </defs>
+                    <svg viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg" style="width: 250px; height: auto;">
+                      <!-- 左：ロゴマーク -->
+                      <g transform="translate(0, 0)">
+                        <polyline points="0,5 65,5 65,70" fill="none" stroke="#dc7b45" stroke-width="12" />
+                        <text x="6" y="58" font-family="'Klee One', 'Sawarabi Mincho', serif" font-size="58" fill="#dc7b45" font-weight="900" transform="translate(5,0) rotate(-5)">夕</text>
                       </g>
-                      <text x="60" y="42" font-family="'Noto Serif JP', serif" font-size="26" font-weight="bold" fill="#333333" letter-spacing="6">伊豫果園</text>
+                      <!-- 右：テキスト -->
+                      <g transform="translate(85, 38)">
+                        <text x="0" y="0" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#2a2a2a" letter-spacing="3">IYOKAEN</text>
+                        <text x="5" y="32" font-family="'Kaisei Decol', 'Sawarabi Mincho', 'Noto Serif JP', serif" font-size="28" font-weight="700" fill="#2a2a2a" letter-spacing="6">伊 豫 果 園</text>
+                      </g>
                     </svg>
                     <span style="display: none;">{LogoTag}</span>
                 </a>
@@ -2320,19 +2321,17 @@
     <section class="lp-section">
         <div class="lp-inner">
             <div style="text-align: center; margin-bottom: 40px;">
-                <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 240px; height: auto; margin: 0 auto; display: block;">
-                  <g transform="translate(170, -5)">
-                    <path d="M 30 15 Q 15 5 10 20 Q 20 25 30 15 Z" fill="#8f9c3e"/>
-                    <path d="M 32 17 Q 45 5 50 15 Q 40 25 32 17 Z" fill="#677524"/>
-                    <circle cx="30" cy="40" r="22" fill="url(#mikanGradient)"/>
-                    <defs>
-                      <radialGradient id="mikanGradient" cx="30%" cy="30%" r="80%">
-                        <stop offset="0%" stop-color="#ffb347"/>
-                        <stop offset="100%" stop-color="#e36b00"/>
-                      </radialGradient>
-                    </defs>
+                <svg viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px; height: auto; margin: 0 auto; display: block;">
+                  <!-- 左：ロゴマーク -->
+                  <g transform="translate(30, 0)">
+                    <polyline points="0,5 65,5 65,70" fill="none" stroke="#dc7b45" stroke-width="12" />
+                    <text x="6" y="58" font-family="'Klee One', 'Sawarabi Mincho', serif" font-size="58" fill="#dc7b45" font-weight="900" transform="translate(5,0) rotate(-5)">夕</text>
                   </g>
-                  <text x="50%" y="110" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="32" font-weight="bold" fill="#333333" letter-spacing="10">伊豫果園</text>
+                  <!-- 右：テキスト -->
+                  <g transform="translate(115, 38)">
+                    <text x="0" y="0" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#2a2a2a" letter-spacing="3">IYOKAEN</text>
+                    <text x="5" y="32" font-family="'Kaisei Decol', 'Sawarabi Mincho', 'Noto Serif JP', serif" font-size="28" font-weight="700" fill="#2a2a2a" letter-spacing="6">伊 豫 果 園</text>
+                  </g>
                 </svg>
             </div>
             <h2 class="lp-title" style="text-align: center;">みかんは、私たち家族の「子供」です</h2>
